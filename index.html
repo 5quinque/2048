@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=.7, user-scalable=no" />
+  <title>2048</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="wrap" class="wrapper">
+    <div class="game_over">
+      <h2>Game Over!</h2>
+    </div>
+    <div class="box_wrapper">
+    </div>
+    <div class="button_grp">
+      <div class="item item-a">
+      <button class="play_again">Start Again!</button>
+      </div>  
+      <div class="item item-b">
+        Score
+        <div class="score">0</div>
+      </div>
+      <div class="item item-c">
+        High Score
+        <div class="highscore">0</div>
+      </div>
+      <div class="item item-d">
+<input type="checkbox" id="auto_mode" name="auto_mode" class="switch-input">
+<label for="auto_mode" class="switch-label">Auto Play <span class="toggle--on">On</span><span class="toggle--off">Off</span></label>
+      </div>
+      <div class="item item-e">
+<input type="checkbox" id="easy_mode" name="easy_mode" class="switch-input">
+<label for="easy_mode" class="switch-label">Easy Mode <span class="toggle--on">On</span><span class="toggle--off">Off</span></label>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
