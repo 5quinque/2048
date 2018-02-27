@@ -295,4 +295,6 @@ p {
   display: none;
 }
 
-
+.instructions {
+  color: #fff;
+}
