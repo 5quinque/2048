@@ -188,7 +188,8 @@ body {
   box-shadow: inset 0px -5px 0px 0px #dbb25d;
   border-radius: 6px;
   text-align: center;
-  height: 75px;
+  padding-top: 10px;
+  height: 65px;
 }
 .item-c {
   grid-column: col 3 / span 1;
@@ -197,7 +198,8 @@ body {
   box-shadow: inset 0px -5px 0px 0px #dbb25d;
   border-radius: 6px;
   text-align: center;
-  height: 75px;
+  padding-top: 10px;
+  height: 65px;
 }
   .item-d {
     grid-column: col / span 1 ;
@@ -227,7 +229,7 @@ body {
 .score, .highscore {
   font-weight: 600;
   font-size: 2.2em;
-  line-height: 1.5em;
+  line-height: 1.3em;
 }
 
 p {

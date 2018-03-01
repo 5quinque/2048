@@ -141,7 +141,6 @@ class Box {
     var boxValue = this.boxes[index].text();
     var neighbourValue = this.boxes[neighbourIndex].text();
 
-
     if (boxValue == neighbourValue) {
       if (dryrun) return true;
       
@@ -167,7 +166,6 @@ class Box {
 
     if (this.boxes[neighbourIndex].attr('class') == 'empty_box') {
       if (dryrun) return true;
-      //console.log('can move ' + direction);
       this.emptyBox(this.boxes[index]);
       this.addBox(neighbourIndex, boxValue);
 
@@ -274,7 +272,6 @@ class Input {
   }
 
   autoPlay() {
-    console.log("AutoPLayFUNction");
     var directions = ["up", "down", "left", "right"];
     var direction = directions[Math.floor(Math.random() * 4)];
     this.box.move(direction);
@@ -282,7 +279,6 @@ class Input {
 
   getSettings() {
     this.box.easyMode = $("#easy_mode").is(":checked");
-    //this.autoPlay = $("#auto_mode").is(":checked");
   }
 
   listenForSettings() {
@@ -294,10 +290,8 @@ class Input {
 
     $("#auto_mode").change(function() {
       if (this.checked) {
-        console.log("Starting autoplay");
         self.autoPlayInt = setInterval(self.autoPlay, 350);
       } else {
-        console.log("Clearing autoplay");
         clearInterval(self.autoPlayInt);
       }
     });
@@ -314,25 +308,21 @@ class Input {
     var self = this;
     $(document).keydown(function(e) {
       switch(e.which) {
-        case 37: // left
+        case 37:
         self.box.move("left");
         break;
-    
-        case 38: // up
+        case 38:
         self.box.move("up");
         break;
-    
-        case 39: // right
+        case 39:
         self.box.move("right");
         break;
-    
-        case 40: // down
+        case 40:
         self.box.move("down");
         break;
-    
-        default: return; // exit this handler for other keys
+        default: return;
       }
-      e.preventDefault(); // prevent the default action (scroll / move caret)
+      e.preventDefault();
     });
   
     var touchStartX, touchStartY;
